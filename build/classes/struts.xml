@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- http://struts.apache.org/2.x/docs/hello-world-using-struts-2.html -->
+
+<struts>
+	<!-- http://struts.apache.org/2.0.11/docs/devmode.html-->
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources" value="global"/>
+
+	<package name="social-package" extends="struts-default">
+
+		<action name="index">
+			<result>pages/welcome/index.jsp</result>
+		</action>
+  		
+  		<action name="initial" class="com.class3601.social.actions.InitialTestAction" method="execute">
+    		<result name="success">pages/example/example-test.jsp</result>
+    		<result name="fail">pages/example/example-errors.jsp</result>
+  		</action>
+  		
+  		<action name="login" class="com.class3601.social.actions.LoginAction" method="execute">
+    		<result name="success">pages/login/loginsuccess.jsp</result>
+    		<result name="fail">pages/login/loginfail.jsp</result>
+  		</action>
+  		
+  		<action name="logoff" class="com.class3601.social.actions.LogoffAction" method="execute">
+    		<result name="success">pages/logoff/logoffsuccess.jsp</result>
+    		<result name="fail">pages/logoff/logofffail.jsp</result>
+  		</action>
+  		
+  		<action name="signup" class="com.class3601.social.actions.SignupAction" method="execute">
+    		<result name="success">pages/signup/signupsuccess.jsp</result>
+    		<result name="fail">pages/signup/signupfail.jsp</result>
+  		</action>
+  		
+  		<action name="getusers" class="com.class3601.social.actions.GetUsersAction" method="execute">
+    		<result name="success">pages/users/usersuccess.jsp</result>
+    		<result name="fail">pages/users/userfail.jsp</result>
+  		</action>
+  		
+  		<action name="getuserprofile" class="com.class3601.social.actions.GetUserProfileAction" method="execute">
+    		<result name="success">pages/users/usersuccess.jsp</result>
+    		<result name="fail">pages/users/userfail.jsp</result>
+  		</action>
+  		
+  		<action name="updateuser" class="com.class3601.social.actions.UpdateUserAction" method="execute">
+    		<result name="success">pages/users/usersuccess.jsp</result>
+    		<result name="fail">pages/users/userfail.jsp</result>
+  		</action>
+  		
+  		<action name="addfriend" class="com.class3601.social.actions.AddFriendAction" method="execute">
+    		<result name="success">pages/friends/friendsuccess.jsp</result>
+    		<result name="fail">pages/friends/friendfail.jsp</result>
+  		</action>
+  		
+  		<action name="getfriends" class="com.class3601.social.actions.GetFriendsAction" method="execute">
+    		<result name="success">pages/friends/friendsuccess.jsp</result>
+    		<result name="fail">pages/friends/friendfail.jsp</result>
+  		</action>
+  		
+  		<action name="getgames" class="com.class3601.social.actions.GetGamesAction" method="execute">
+    		<result name="success">pages/games/gamesuccess.jsp</result>
+    		<result name="fail">pages/games/gamefail.jsp</result>
+  		</action>
+
+	</package>
+
+</struts>
